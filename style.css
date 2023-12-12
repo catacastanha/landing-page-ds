@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/*color pallete*/
+:root {
+    --darkblue: #1C3652;
+    --lightblue: #619CC5;
+    --white: #d9d9d9;
+    --green-ish: #52BDB7;
+    --darkgreen: #2F5E54;
+}
+
+.background {
+    background: no-repeat url(images/fundo1.jpg);
+    background-size: cover;
+}
+
+.transparent-header {
+    margin-top: 1.2em;
+    padding: 20px;
+    background-color: #06182a42;
+    transition: 2s ease-out;
+}
+
+.title {
+    color: var(--white);
+    font-family: 'Shrikhand', serif;
+    font-weight: 100;
+}
+
+.cards-overall {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: 50vh 50vh;
+    grid-template-rows: 30vh 30vh;
+    grid-column-gap: 3.3em;
+    grid-row-gap: 2em;
+    justify-content: center;
+}
+
+.card {
+    width: 50vh;
+    height: 30vh;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.74s ease-in-out;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front1,
+.card-front2,
+.card-front3,
+.card-front4,
+.card-back1,
+.card-back2,
+.card-back3,
+.card-back4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front1 {
+    background-image: url(images/maldives.jpg);
+    background-size: cover;
+    border-radius: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(0deg);
+}
+
+.card-front2 {
+    background-image: url(images/switz.jpg);
+    background-size: cover;
+    border-radius: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(0deg);
+}
+
+.card-front3 {
+    background-image: url(images/egypt.jpg);
+    background-size: cover;
+    border-radius: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(0deg);
+}
+
+.card-front4 {
+    background: no-repeat url(images/rio.jpg);
+    background-size: cover;
+    border-radius: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(0deg);
+}
+
+.card-front1 p,
+.card-front2 p,
+.card-front3 p,
+.card-front4 p {
+    color: var(--white);
+    font: 40px 'Shrikhand', serif;
+    text-shadow: 2px 2px var(--darkblue);
+}
+
+.card-back1 {
+    background-color: var(--white);
+    background-size: cover;
+    border-radius: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg)
+}
+
+.card-back2 {
+    background-color: var(--white);
+    background-size: cover;
+    border-radius: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg)
+}
+
+.card-back3 {
+    background-color: var(--white);
+    background-size: cover;
+    border-radius: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg)
+}
+
+.card-back4 {
+    background-color: var(--white);
+    background-size: cover;
+    border-radius: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+.btn p {
+    color: var(--white);
+    font-family: 'Scope One', serif;
+}
+
+button {
+    margin: 30px;
+    padding: 8px;
+    width: 45vh;
+    border-radius: 50px;
+    background-color: #29e1b983;
+    position: relative;
+    transform: scale(1);
+    border-style: none;
+    box-shadow: 0 2px 2px var(--darkgreen),
+        8px 3px 20px #000;
+}
+
+button:hover {
+    box-shadow: 0 0 5px var(--white),
+        0 0 20px var(--white),
+        0 0 30px var(--green-ish),
+        0 0 50px var(--green-ish);
+    ;
+    transform: scale(1.05);
+    transition: transform 0.4s;
+}
+
+.btn {
+    background-color: var(--darkgreen);
+    border-radius: 30px;
+    width: 40vh;
+    padding: 14px;
+}
+
+.card-pricing {
+    font: 40px'Shrikhand', serif;
+}
+
+.last-price{
+    font-family: 'Scope One', serif;
+    color: #2F5E54;
+}
